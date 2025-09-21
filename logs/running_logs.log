@@ -43,3 +43,30 @@ OSError: [Errno 28] No space left on device
 [2025-09-21 17:09:50,365: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
 
 x==========x]
+[2025-09-21 17:47:59,368: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-21 17:47:59,420: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-21 17:47:59,426: INFO: common: created directory at: artifacts]
+[2025-09-21 17:47:59,430: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-09-21 17:48:23,188: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-09-21 17:48:23,563: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-09-21 17:58:08,797: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-21 17:58:08,804: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-21 17:58:08,809: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-21 17:58:08,809: INFO: common: created directory at: artifacts]
+[2025-09-21 17:58:08,811: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-21 17:58:08,812: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/12ZufT2tAZFJP9Fw6al49j2IGFfTPZ0Fq/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-21 18:02:01,184: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/12ZufT2tAZFJP9Fw6al49j2IGFfTPZ0Fq/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-21 18:02:41,049: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-21 18:02:41,049: INFO: main: *******************]
+[2025-09-21 18:02:41,049: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2025-09-21 18:02:41,056: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-21 18:02:41,061: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-21 18:02:41,062: INFO: common: created directory at: artifacts]
+[2025-09-21 18:02:41,063: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-09-21 18:02:42,668: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-09-21 18:02:43,167: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2025-09-21 18:02:43,512: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
