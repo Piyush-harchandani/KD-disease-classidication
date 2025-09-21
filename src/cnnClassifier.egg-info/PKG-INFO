@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: cnnClassifier
+Version: 0.0.0
+Summary: A small python package for CNN app
+Home-page: https://github.com/Piyush-harchandani/KD-disease-classidication
+Author: Piyush-harchandani
+Author-email: pharchandani7@gmail.com
+Project-URL: Bug Tracker, https://github.com/Piyush-harchandani/KD-disease-classidication/issues
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
+
+# KD-disease-classidication
