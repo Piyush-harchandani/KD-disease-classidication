@@ -1,1 +1,45 @@
 [2025-09-21 15:10:44,694: INFO: main: Welcome to our custom log]
+[2025-09-21 16:36:40,371: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-21 16:36:40,380: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-21 16:36:40,395: INFO: common: created directory at: artifacts]
+[2025-09-21 16:36:40,399: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-21 16:36:40,404: INFO: 986331348: Downloading data from https://drive.google.com/file/d/12ZufT2tAZFJP9Fw6al49j2IGFfTPZ0Fq/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-21 16:41:28,176: INFO: 986331348: Downloaded data from https://drive.google.com/file/d/12ZufT2tAZFJP9Fw6al49j2IGFfTPZ0Fq/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-21 16:55:35,752: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-21 16:55:35,758: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-21 16:55:35,760: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-21 16:55:35,761: INFO: common: created directory at: artifacts]
+[2025-09-21 16:55:35,762: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-21 16:55:35,764: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/12ZufT2tAZFJP9Fw6al49j2IGFfTPZ0Fq/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-21 16:59:57,046: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/12ZufT2tAZFJP9Fw6al49j2IGFfTPZ0Fq/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-21 17:00:43,612: ERROR: main: [Errno 28] No space left on device]
+Traceback (most recent call last):
+  File "C:\Users\USER\OneDrive\Desktop\Projects\KD-disease-classidication\main.py", line 9, in <module>
+    data_ingestion.main()
+  File "c:\users\user\onedrive\desktop\projects\kd-disease-classidication\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\user\onedrive\desktop\projects\kd-disease-classidication\src\cnnClassifier\components\data_ingestion.py", line 46, in extract_zip_file
+    zip_ref.extractall(unzip_path)
+  File "C:\Users\USER\anaconda3\envs\kidney123_py310\lib\zipfile.py", line 1660, in extractall
+    self._extract_member(zipinfo, path, pwd)
+  File "C:\Users\USER\anaconda3\envs\kidney123_py310\lib\zipfile.py", line 1715, in _extract_member
+    shutil.copyfileobj(source, target)
+  File "C:\Users\USER\anaconda3\envs\kidney123_py310\lib\shutil.py", line 198, in copyfileobj
+    fdst_write(buf)
+OSError: [Errno 28] No space left on device
+[2025-09-21 17:04:05,282: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-21 17:04:05,286: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-21 17:04:05,288: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-21 17:04:05,289: INFO: common: created directory at: artifacts]
+[2025-09-21 17:04:05,290: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-21 17:04:05,291: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/12ZufT2tAZFJP9Fw6al49j2IGFfTPZ0Fq/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-21 17:04:35,991: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-21 17:04:35,996: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-21 17:04:35,998: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-21 17:04:35,999: INFO: common: created directory at: artifacts]
+[2025-09-21 17:04:36,001: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-21 17:04:36,002: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/12ZufT2tAZFJP9Fw6al49j2IGFfTPZ0Fq/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-21 17:09:09,498: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/12ZufT2tAZFJP9Fw6al49j2IGFfTPZ0Fq/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-21 17:09:50,365: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
