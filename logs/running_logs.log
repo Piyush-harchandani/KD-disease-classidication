@@ -201,3 +201,104 @@ x==========x]
 [2025-09-22 11:45:09,360:INFO:570957533:Base model loaded and recompiled successfully from artifacts\prepare_base_model\base_model_updated.h5]
 [2025-09-22 14:40:52,352:WARNING:saving_api:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
 [2025-09-22 14:40:52,798:INFO:570957533:Model saved successfully at artifacts\training\model.h5]
+[2025-09-25 15:37:44,212:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.101:8080]
+[2025-09-25 15:37:44,213:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-09-25 15:39:25,186:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.101:8080]
+[2025-09-25 15:39:25,186:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-09-25 15:39:30,220:INFO:_internal:127.0.0.1 - - [25/Sep/2025 15:39:30] "GET / HTTP/1.1" 200 -]
+[2025-09-25 15:40:00,031:ERROR:app:Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\USER\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\anaconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\anaconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\OneDrive\Desktop\Projects\KD-disease-classidication\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\OneDrive\Desktop\Projects\KD-disease-classidication\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\anaconda3\envs\kidney\Lib\site-packages\keras\src\saving\saving_api.py", line 196, in load_model
+    return legacy_h5_format.load_model_from_hdf5(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\anaconda3\envs\kidney\Lib\site-packages\keras\src\legacy\saving\legacy_h5_format.py", line 118, in load_model_from_hdf5
+    f = h5py.File(filepath, mode="r")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\anaconda3\envs\kidney\Lib\site-packages\h5py\_hl\files.py", line 564, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\anaconda3\envs\kidney\Lib\site-packages\h5py\_hl\files.py", line 238, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "h5py/_objects.pyx", line 56, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 57, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 102, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = 'model\model.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+[2025-09-25 15:40:00,054:INFO:_internal:127.0.0.1 - - [25/Sep/2025 15:40:00] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-09-25 16:26:47,459:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.101:8080]
+[2025-09-25 16:26:47,459:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-09-25 16:27:02,917:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:27:02] "GET / HTTP/1.1" 200 -]
+[2025-09-25 16:27:10,804:WARNING:saving_utils:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-09-25 16:27:13,339:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:27:13] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:27:33,357:WARNING:saving_utils:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-09-25 16:27:36,250:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:27:36] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:28:03,245:WARNING:saving_utils:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-09-25 16:28:06,186:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:28:06] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:29:38,953:WARNING:saving_utils:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-09-25 16:29:39,839:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.101:8080]
+[2025-09-25 16:29:39,840:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-09-25 16:29:49,190:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:29:49] "GET / HTTP/1.1" 200 -]
+[2025-09-25 16:29:56,670:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:29:56] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:30:32,149:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:30:32] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:30:35,056:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:30:35] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:30:42,321:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:30:42] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:31:46,737:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:31:46] "GET / HTTP/1.1" 200 -]
+[2025-09-25 16:32:11,630:WARNING:saving_utils:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-09-25 16:32:12,561:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.101:8080]
+[2025-09-25 16:32:12,561:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-09-25 16:32:19,743:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:32:19] "GET / HTTP/1.1" 200 -]
+[2025-09-25 16:32:29,219:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:32:29] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:32:51,297:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:32:51] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:33:02,796:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:33:02] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:33:11,316:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:33:11] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:34:48,243:WARNING:saving_utils:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-09-25 16:34:49,118:INFO:_internal:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.101:8080]
+[2025-09-25 16:34:49,119:INFO:_internal:[33mPress CTRL+C to quit[0m]
+[2025-09-25 16:34:59,690:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:34:59] "GET / HTTP/1.1" 200 -]
+[2025-09-25 16:35:07,202:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:35:07] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:35:15,551:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:35:15] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:35:48,169:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:35:48] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:38:30,801:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:38:30] "POST /predict HTTP/1.1" 200 -]
+[2025-09-25 16:38:40,608:INFO:_internal:127.0.0.1 - - [25/Sep/2025 16:38:40] "POST /predict HTTP/1.1" 200 -]
